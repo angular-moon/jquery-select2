@@ -6,7 +6,7 @@
  * https://github.com/select2/select2/blob/master/LICENSE.md
  */
 (function (factory) {
-  if (typeof define === 'function' && define.amd) {
+  /*if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
     define(['jquery'], factory);
   } else if (typeof exports === 'object') {
@@ -15,7 +15,8 @@
   } else {
     // Browser globals
     factory(jQuery);
-  }
+  }*/
+    factory(jQuery);
 }(function (jQuery) {
   // This is needed so we can catch the AMD loader configuration and use it
   // The inner file should be wrapped (by `banner.start.js`) in a function that
@@ -4461,47 +4462,38 @@ S2.define('select2/dropdown/closeOnSelect',[
   return CloseOnSelect;
 });
 
-S2.define('select2/i18n/en',[],function () {
-  // English
+S2.define('select2/i18n/cn',[],function () {
   return {
     errorLoading: function () {
-      return 'The results could not be loaded.';
+      return '无法载入结果';
     },
     inputTooLong: function (args) {
       var overChars = args.input.length - args.maximum;
 
-      var message = 'Please delete ' + overChars + ' character';
-
-      if (overChars != 1) {
-        message += 's';
-      }
+      var message = '请删除 ' + overChars + ' 个字符';
 
       return message;
     },
     inputTooShort: function (args) {
       var remainingChars = args.minimum - args.input.length;
 
-      var message = 'Please enter ' + remainingChars + ' or more characters';
+      var message = '请再输入至少 ' + remainingChars + ' 个字符';
 
       return message;
     },
     loadingMore: function () {
-      return 'Loading more results…';
+      return '载入更多结果…';
     },
     maximumSelected: function (args) {
-      var message = 'You can only select ' + args.maximum + ' item';
-
-      if (args.maximum != 1) {
-        message += 's';
-      }
+      var message = '最多只能选择 ' + args.maximum + ' 项';
 
       return message;
     },
     noResults: function () {
-      return 'No results found';
+      return '未找到结果';
     },
     searching: function () {
-      return 'Searching…';
+      return '搜索中…';
     }
   };
 });
@@ -4541,7 +4533,7 @@ S2.define('select2/defaults',[
   './dropdown/selectOnClose',
   './dropdown/closeOnSelect',
 
-  './i18n/en'
+  './i18n/cn'
 ], function ($, require,
 
              ResultsList,
