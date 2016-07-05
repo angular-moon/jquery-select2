@@ -4462,7 +4462,7 @@ S2.define('select2/dropdown/closeOnSelect',[
   return CloseOnSelect;
 });
 
-S2.define('select2/i18n/cn',[],function () {
+S2.define('select2/i18n/en',[],function () {
   return {
     errorLoading: function () {
       return '无法载入结果';
@@ -4533,7 +4533,7 @@ S2.define('select2/defaults',[
   './dropdown/selectOnClose',
   './dropdown/closeOnSelect',
 
-  './i18n/cn'
+  './i18n/en'
 ], function ($, require,
 
              ResultsList,
@@ -4931,13 +4931,13 @@ S2.define('select2/options',[
       this.options.disabled = $e.prop('disabled');
     }
 
-    if (this.options.language == null) {
+    /*if (this.options.language == null) {
       if ($e.prop('lang')) {
         this.options.language = $e.prop('lang').toLowerCase();
       } else if ($e.closest('[lang]').prop('lang')) {
         this.options.language = $e.closest('[lang]').prop('lang');
       }
-    }
+    }*/
 
     if (this.options.dir == null) {
       if ($e.prop('dir')) {
