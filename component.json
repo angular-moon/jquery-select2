@@ -4,12 +4,11 @@
     "name": "jquery-select2",
     "main": "select2.full.js",
     "dependencies": [
-        "jquery",
-        "css"
+        "jquery"
     ],
     "shim": {
         "select2.full.js": {
-             "deps": ["css!select2.css"]
+             "deps": ["select2.css"]
         }
     }
 }
